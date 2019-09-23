@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_gray_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/layout_actionbar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"></include>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/app_white"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:text="入住信息"
+                    android:textColor="#5F5F5F"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/allot_key_user_addr_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_white"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:text="褐石公园1期3-1-5"
+                    android:textColor="#808080"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_gray"></View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_white_top_bottom_deeper_gray_shape_1px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/add_key_sf_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="身份"
+                        android:textColor="@color/text_color"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/add_key_sf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="请选择"
+                        android:textColor="#979797"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/fitment_start_time_image"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="3dp"
+                        android:src="@mipmap/arrow_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/line_gray">
+
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/add_key_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="授权名额数量"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:orientation="horizontal"
+                        android:paddingRight="20dp">
+
+                        <ImageView
+                            android:id="@+id/allot_key_remove_tv"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_marginLeft="9dp"
+                            android:src="@mipmap/end_key_" />
+
+                        <TextView
+                            android:id="@+id/allot_key_amount_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/allot_key_add_tv"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_marginLeft="9dp"
+                            android:src="@mipmap/add_key_" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_white_top_bottom_deeper_gray_shape_1px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="被授权人姓名"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                    <EditText
+                        android:id="@+id/allot_key_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="请输入"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="35dp"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/line_gray">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@color/app_white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="手机号"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                    <EditText
+                        android:id="@+id/allot_key_phone_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="请输入手机号"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="11"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="35dp"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:text="被授权人可以基于被授权名额的数量，继续授权其他用户"
+                android:textColor="@color/text_color"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/allot_key_confirm_tv"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selecter_default_green"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="确认"
+            android:textColor="@color/app_white"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</LinearLayout>

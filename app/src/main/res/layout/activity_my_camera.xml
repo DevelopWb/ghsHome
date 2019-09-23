@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#777777"
+  >
+
+    <SurfaceView
+        android:id="@+id/surface_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/surface_bg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/face_icon" />
+
+            <ImageView
+                android:id="@+id/header_left_iv"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/back_white"></ImageView>
+
+            <TextView
+                android:id="@+id/header_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="采集人脸"
+                android:textColor="@color/app_white"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/take_photo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="25dp"
+                android:background="@drawable/bt_selecter_default_green"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="采集"
+                android:textColor="@color/app_white"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

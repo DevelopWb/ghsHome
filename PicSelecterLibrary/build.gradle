@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    signingConfigs {
+        ghs_release {
+            keyAlias 'ghshome'
+            keyPassword 'Dexingjiu2018'
+            storeFile file('ghshome.keystore')
+            storePassword 'Dexingjiu2018'
+        }
+    }
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.ghs_release
+        }
+        release {
+            signingConfig signingConfigs.ghs_release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.github.chrisbanes.photoview:library:1.2.3'
+    //沉浸式
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.2-beta01'
+}

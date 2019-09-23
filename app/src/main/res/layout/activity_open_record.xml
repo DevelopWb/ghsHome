@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/app_gray_light"
+
+    android:orientation="vertical"
+   >
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+
+    <LinearLayout
+        android:id="@+id/open_record_allowed_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="允许查看"
+            android:textColor="@color/app_black"
+            android:textSize="14dp" />
+        <Switch
+            android:id="@+id/open_record_allowed_s"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/activity_no_data_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="hello world"
+        android:textColor="#FF9B9B9B"
+        android:textSize="12dp" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/open_record_sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/open_record_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

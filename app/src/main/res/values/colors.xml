@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#4AA146</color>
+    <color name="navigition_press">#FFFFFF</color>
+    <color name="app_green">#53C68B</color>
+    <color name="app_green_deeper">#51C146</color>
+    <color name="text_red">#D0021B</color>
+    <color name="text_delete">#FE3636</color>
+    <color name="app_black">#000000</color>
+    <color name="app_white">#ffffff</color>
+    <color name="app_white2">#00000000</color>
+    <color name="app_gray_light">#F7F7F7</color>
+    <color name="blue">#2367C9</color>
+    <color name="text_press">#53C68B</color>
+    <color name="button_backgroud">#53C68B</color>
+    <color name="tab_bg">#53C68C</color>
+    <color name="unclick_gray">#ccc</color>
+    <color name="text_des">#ACACAC</color>
+    <color name="unclick_gray_deep">#BDBDBD</color>
+    <color name="car_info_gray">#FAFAFA</color>
+    <color name="gray_deeper">#979797</color>
+    <color name="line_gray">#E0E0E0</color>
+    <color name="text_color">#333333</color>
+    <color name="seed_task_bg">#666666</color>
+    <color name="text_title_color">#5F5F5F</color>
+
+</resources>

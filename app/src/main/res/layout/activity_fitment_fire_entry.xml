@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_gray_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".models.propertyHall.decoration.CreateFireEntryActivity">
+
+    <include
+        android:id="@+id/top_title_layout_rl"
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="房屋名称"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/fitment_room_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:lines="1"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="30dp"
+                        android:text="一期一号楼一单元101"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="申请人"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/fitment_proposer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:lines="1"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="30dp"
+                        android:text="里小双"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="联系电话"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/fitment_proposer_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:lines="1"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="30dp"
+                        android:text="18810891140"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fitment_fire_startTime_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_white_top_bottom_deeper_gray_shape_1px"
+
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="动火开始时间"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/fitment_fire_startTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="请选择"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/fitment_start_time_image"
+                    android:layout_width="8dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right|center"
+                    android:layout_marginLeft="3dp"
+                    android:src="@mipmap/arrow_right" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/fitment_fire_endTime_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="动火结束时间"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/fitment_fire_endTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="请选择"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/fitment_end_time_image"
+                    android:layout_width="8dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right|center"
+                    android:layout_marginLeft="3dp"
+                    android:src="@mipmap/arrow_right" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="动火位置"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/fitment_fire_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="如：厨房燃气灶"
+                    android:inputType="textMultiLine"
+                    android:maxLength="300"
+                    android:maxLines="8"
+                    android:minHeight="80dp"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="动火方式与设备"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/fitment_fire_facility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="如：天然气点火"
+                    android:inputType="textMultiLine"
+                    android:maxLength="300"
+                    android:maxLines="8"
+                    android:minHeight="80dp"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="动火原因"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/fitment_fire_cause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="如：装修首次点火"
+                    android:inputType="textMultiLine"
+                    android:maxLength="300"
+                    android:maxLines="8"
+                    android:minHeight="80dp"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="动火作业安全措施"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/fitment_fire_measure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="如：煤气防泄漏检测"
+                    android:inputType="textMultiLine"
+                    android:maxLength="300"
+                    android:maxLines="8"
+                    android:minHeight="80dp"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="动火作业人"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+                <EditText
+                    android:id="@+id/fitment_fire_operator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="请输入"
+                    android:lines="1"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="30dp"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="操作证号"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+                <EditText
+                    android:id="@+id/fitment_fire_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="请输入"
+                    android:lines="1"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="30dp"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_gray_only_bottom_deeper_gray_shape_1px"></LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_gray_top_bottom_deeper_gray_shape_1px">
+
+                <fragment
+                    android:id="@+id/select_photos_fg"
+                    android:name="com.ghs.ghshome.base.displayPhotos.SelectPhotosToUploadFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></fragment>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_gray"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/entry_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bt_selecter_default_green"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="确定"
+            android:textColor="@color/app_white"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

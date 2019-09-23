@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".models.propertyHall.openByFace.FaceOpenActivity">
+
+    <include
+        layout="@layout/lock_open_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="18dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="80dp"
+                    android:src="@mipmap/facebyopen" />
+
+                <TextView
+                    android:id="@+id/face_villageName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/app_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="姓名"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/face_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center"
+                    android:lines="1"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="25dp"
+                    android:text=""
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/line_gray"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/app_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="房间名"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/face_roomName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center"
+                    android:lines="1"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="25dp"
+                    android:text=""
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/line_gray"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/app_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="人脸开门状态"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/face_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center"
+                    android:lines="1"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="25dp"
+                    android:text=""
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/line_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/face_collect"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="采集人脸"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:background="@mipmap/arrow_right"
+                    android:lines="1"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/app_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="人脸识别范围"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/face_refresh_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/face_get_1"
+                        android:background="@mipmap/opnebyface_refresh" />
+
+                    <TextView
+                        android:id="@+id/face_get_1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="获取新范围"
+                        android:textColor="#5F5F5F"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/face_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_white"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

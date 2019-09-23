@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">光合家</string>
+    <string name="contact_property_add_home" translatable="false">如需添加新房屋，请联系小区物业</string>
+    <string name="allot_key_release_bound" translatable="false">解除授权后对方将无法使用开门等功能，是否确定解除</string>
+    <string name="mine_set_quit_notice" translatable="false">退出不会删除任何历史数据，下次可直接使用手机号登录</string>
+
+    <string name="allow_user_protocal" translatable="false">点击登录即表示您已同意《光合家用户协议》</string>
+    <string name="property_call_center_des" translatable="false">您的专属客服报修、投诉与咨询一键触达 全程跟进</string>
+    <string name="perm_call_activity" translatable="false">请给予应用以下全部权限，否则无法使用此功能。</string>
+    <string name="perm_camera_store" translatable="false">请给予应用相机权限和存储权限，让程序可正常工作。</string>
+    <string name="perm_store" translatable="false">请给予应用存储权限，让程序可正常工作。</string>
+    <string name="perm_location" translatable="false">请给予应用定位权限，让程序可正常工作。</string>
+    <string name="perm_call" translatable="false">请给予应用拨打电话的权限，让程序可正常工作。</string>
+    <string name="cancel" translatable="false">取消</string>
+    <string name="perm_tip" translatable="false">
+        \n请点击"设置"-"权限"-打开所需权限。
+    </string>
+    <string name="confirm" translatable="false">确定</string>
+    <string name="delete_car" translatable="false">移除车辆可能导致您的车辆无法进入小区，确定移除吗？</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_search" translatable="false">SearchActivity</string>
+    <string name="check_identity_notice" translatable="false">为了保证本社区的住户能够享有高品质的服务，请提供您的真实信息以供物业进行认证</string>
+    <string name="notice">提示</string>
+    <string name="quit_house">退出房间后，将不可使用该房间所有功能，确定退出吗？</string>
+    <string name="delete_house">确定要删除此条记录吗？</string>
+    <string name="check_reject_notice">此功能“需要认证通过后”才可使用，可联系物业进行催办。</string>
+    <string name="check_wait_notice">房屋住户身份“认证不通过”，请提供真实有效的信息以供物业认证。</string>
+</resources>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ghs.ghshome">
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 视频通话 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 阿里移动推送相关权限 -->
+    <!-- Android 6.0版本可去除，用于选举信息（通道复用）的同步 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 选举使用，当应用有删除或者更新时需要重新选举，复用推送通道 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" /> <!-- 补偿通道PUSH使用，不用可去除 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 补偿通道GCM使用，不使用可去除 -->
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        tools:node="remove" /> <!-- 允许监听启动完成事件 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 允许task重排序 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" /> <!-- 小米推送权限 -->
+    <permission
+        android:name="com.ghs.ghshome.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"
+        tools:replace="android:protectionLevel" />
+
+    <uses-permission android:name="com.ghs.ghshome.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name=".HotfixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ghshome_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".models.checkIdentity.CheckNoticeActivity"></activity>
+        <activity
+            android:name=".models.main.houseManager.HouseManagerActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".models.checkIdentity.selectRoom.SelectRoomActivity" />
+        <activity android:name=".models.checkIdentity.CheckIdentityActivity" />
+        <activity
+            android:name=".models.checkIdentity.searchVillage.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity android:name=".models.checkIdentity.selectCity.SelectCityActivity" />
+        <activity android:name=".models.checkIdentity.SelectVillageActivity" />
+        <activity android:name=".models.homePage.carPark.ParkFeeDetailActivity" />
+        <activity android:name=".models.homePage.visitors.visitorRequest.DealVisitorRequestActivity" />
+        <activity android:name=".models.homePage.carPark.ParkRecordActivity" />
+        <activity
+            android:name=".models.main.SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".models.homePage.carPark.myCar.MineCarActivity" />
+        <activity android:name=".models.homePage.seed.SeedRecordActivity" />
+        <activity android:name=".models.homePage.seed.SeedActivity" />
+        <activity android:name=".base.promission.PromissionManagerActivity" />
+        <activity android:name=".models.propertyHall.openByFace.FaceOpenActivity" />
+        <activity android:name=".models.homePage.houseBill.billhistory.BillHistoryDetailActivity" />
+        <activity android:name=".models.mine.mineWorkOrders.MineWorkOrdersActivity" />
+        <activity
+            android:name=".models.homePage.houseKeeperNotice.HouseKeeperNoticeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.homePage.oneKeyCall.WorkOrderDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.oneKeyCall.OneKeyCallActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.editUsuallyUsedServices.EditUsuallyUsedServicesActivity"
+            android:launchMode="singleTop" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ghs.ghshome.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".models.homePage.keymanager.allotkey.AllotKeyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.keymanager.addkey.AddkeyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.openDoorByMobile.remoteopen.RemoteOpenActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.openByFace.TakeFacePhotoActivity"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".models.propertyHall.openDoorByMobile.openrecord.OpenRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.login.LoginActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".models.main.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".models.mine.edituserinfo.EditUserInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.edituserinfo.modifymobile.ModifyMobileActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.houseBill.MyBillActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.aboutus.AboutUsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.useguide.UseGuideActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.appSuggestion.AppSuggestionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.set.SetActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.houseBill.billhistory.BillHistoryActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.houseBill.billhistory.MineBillSelectDateActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.villagenotice.VillageNoticeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.homePage.villagenotice.NoticeDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.houseBill.houseBillUnpay.LifeBillUnPayActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.homePage.houseBill.sectorchart.SectorChartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.houseBill.Linearchart.LinearChartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.carPark.bindcarnum.BindCarNumActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.set.UserProtocalActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" /> <!-- value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!-- 阿里推送 -->
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="25008654" /> <!-- 请填写你自己的- appKey -->
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="1a569744fff7d1c03bd1cf309c979486" /> <!-- 请填写你自己的appSecret -->
+        <!-- 华为推送 value的值“xxx”用实际申请的应用ID替换，来源于开发者联盟网站应用的服务详情。 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100374089" />
+
+        <service
+            android:name="com.alibaba.sdk.android.push.ChannelService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="taobao" />
+            </intent-filter>
+        </service> <!-- 消息接收服务 -->
+        <!-- 消息接收增强服务（可提高通知/消息达到率） -->
+        <service
+            android:name="com.alibaba.sdk.android.push.channel.TaobaoRecvService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".models.push.MyMessageIntentService"
+            android:exported="false">
+            <intent-filter>
+                 
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                     
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".models.push.MyMessageReceiver">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver> <!-- 小米推送 -->
+        <!-- <service -->
+        <!-- android:name="com.xiaomi.push.service.XMPushService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process=":pushservice" /> -->
+        <!-- <service -->
+        <!-- android:name="com.xiaomi.push.service.XMJobService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE" -->
+        <!-- android:process=":pushservice" /> &lt;!&ndash; 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 &ndash;&gt; -->
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" /> <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver> <!-- <receiver -->
+        <!-- android:name="com.xiaomi.push.service.receivers.PingReceiver" -->
+        <!-- android:exported="false" -->
+        <!-- android:process=":pushservice"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.xiaomi.push.PING_TIMER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <receiver
+            android:name=".models.push.mipush.MiPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver> <!-- 小米辅助通道 -->
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.alibaba.sdk.android.push.MiPushBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".models.push.mipush.PUPActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.ghs.ghshome.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" /> <!-- xxx.xx.xx为CP自定义的广播名称，比如: com.huawei.hmssample.HuaweiPushRevicer -->
+        <!-- xxx.xx.xx为CP自定义的广播名称，比如: com.huawei.hmssample.HuaweiPushRevicer -->
+        <receiver android:name=".models.push.jcush.HMSPushReceiver">
+            <intent-filter>
+
+                <!-- 必须,用于接收TOKEN -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 必须，用于接收消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <!-- 可选，用于点击通知栏或通知栏上的按钮后触发onEvent回调 -->
+                <action android:name="com.huawei.android.push.intent.CLICK" />
+                <!-- 可选，查看PUSH通道是否连接，不查看则不需要 -->
+                <action android:name="com.huawei.intent.action.PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">
+            <intent-filter>
+
+                <!-- 接收通道发来的通知栏消息，兼容老版本PUSH -->
+                <action android:name="com.huawei.intent.action.PUSH" />
+            </intent-filter>
+        </receiver> <!-- &lt;!&ndash; 华为通道官方配置 &ndash;&gt; -->
+        <receiver android:name="com.alibaba.sdk.android.push.HuaWeiReceiver">
+            <intent-filter>
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <action android:name="com.huawei.intent.action.PUSH" />
+                <action android:name="com.huawei.intent.action.PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".models.push.hwpush.NotificationClickReceiver" />
+
+        <activity
+            android:name=".models.justtalk.CallActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.edituserinfo.modifynIckname.ModifyNickNameActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.carPark.payfee.PayFeeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.visitors.VisitorRegistActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.homePage.visitors.addVisitor.AddVisitorActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.visitors.visitorRequest.VisitorRequestActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.homePage.officialMsg.OfficialMessageActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.discover.CommunityDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.discover.ApplyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.repairs.RepairsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.openDoorByMobile.MobileOpenActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.openDoorByMobile.PassWordOpenActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.article.AddArticlePassActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.homePage.visitors.addVisitor.VistorDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.article.ArticlePassActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.propertyHall.article.ArticleDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="cn.com.mark.multiimage.core.ImageMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="5f20183401750ac81936f0e33bbdeb32" /> <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name="cn.com.mark.multiimage.core.PreviewActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".base.displayPhotos.DisplayPhotosActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".models.propertyHall.complaint.ComplaintAndSuggestActivity" />
+        <activity android:name=".models.propertyHall.decoration.DecorationActivity" />
+        <activity android:name=".models.propertyHall.decoration.CreateDecorationActivity" />
+        <activity android:name=".models.propertyHall.decoration.CreateFireEntryActivity" />
+        <activity android:name=".models.propertyHall.decoration.DecorationDetailActivity" />
+        <activity android:name=".models.discover.adapter.OfficialPaticularsActivity" />
+        <activity android:name=".models.mine.myevent.MyEventActivity" />
+        <activity android:name=".models.mine.useguide.UseGuideDetailActivity" />
+        <activity android:name=".models.discover.adapter.OfficaialWebActivity" />
+        <activity android:name=".models.propertyHall.openByFace.PhotosOfTakedActivity" />
+        <activity android:name=".models.homePage.keymanager.tenementmanager.TenementManagerActivity" />
+        <activity android:name=".models.homePage.keymanager.tenementmanager.AddTenementActivity" />
+        <activity android:name=".models.homePage.keymanager.tenementmanager.TenementDetailsActivity"></activity>
+    </application>
+
+</manifest>

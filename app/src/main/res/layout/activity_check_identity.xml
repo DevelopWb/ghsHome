@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.ghs.ghshome.custom.CustomActionBar
+        android:id="@+id/custom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:action_bar_background="@drawable/bg_gray_only_bottom_deeper_gray_shape_1px"
+        app:action_bar_left_image_src="@mipmap/back_icon"
+        app:action_bar_title_text="身份认证"></com.ghs.ghshome.custom.CustomActionBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/stroke_gray_bg"
+                android:drawableLeft="@mipmap/mine_bill_electricity_fee"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:text="@string/check_identity_notice" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_top_bottom_deeper_gray_shape_1px"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_only_bottom_gray_shape_1px">
+
+                    <TextView
+                        style="@style/ghshome_item_key"
+                        android:text="社区名称"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/village_name_tv"
+                        style="@style/ghshome_item_key"
+                        android:text="社区名称"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/user_room_cl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_white_only_bottom_gray_shape_1px">
+
+                    <TextView
+                        android:id="@+id/user_room_key_tv"
+                        style="@style/ghshome_item_key"
+                        android:paddingLeft="0dp"
+                        android:text="房屋号"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_room_tv"
+                        style="@style/ghshome_item_key"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="请选择"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="1dp"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintLeft_toRightOf="@+id/user_room_key_tv"
+                        app:layout_constraintRight_toLeftOf="@+id/user_room_tag_tv"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:id="@+id/user_room_tag_tv"
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/user_id_cl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/user_id_key_tv"
+                        style="@style/ghshome_item_key"
+                        android:paddingLeft="0dp"
+                        android:text="住户身份"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_id_tv"
+                        style="@style/ghshome_item_key"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="请选择"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="0dp"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintLeft_toRightOf="@+id/user_id_key_tv"
+                        app:layout_constraintRight_toLeftOf="@+id/user_id_tag_tv"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:id="@+id/user_id_tag_tv"
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/bg_gray_top_bottom_deeper_gray_shape_1px"></View>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_white_only_bottom_gray_shape_1px">
+
+                    <TextView
+                        style="@style/ghshome_item_key"
+                        android:paddingLeft="0dp"
+                        android:text="手机号"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_mobile_tv"
+                        style="@style/ghshome_item_key"
+                        android:text="1888888888"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        style="@style/ghshome_item_key"
+                        android:paddingLeft="0dp"
+                        android:text="姓名"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/user_name_et"
+                        style="@style/ghshome_item_key"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请填写真实姓名"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/commit_check_tv"
+                style="@style/ghshome_bt"
+                android:layout_marginTop="40dp"
+                android:text="提交认证" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

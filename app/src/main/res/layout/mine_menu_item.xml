@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/app_white"
+    android:paddingLeft="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/mine_menu_icon_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mine_menu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#5F5F5F"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/mine_menu_des_tv"
+        app:layout_constraintLeft_toRightOf="@+id/mine_menu_icon_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/mine_menu_des_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_des"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/mine_menu_tv"
+        app:layout_constraintTop_toBottomOf="@+id/mine_menu_tv" />
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/arrow_right"
+        app:layout_constraintBottom_toBottomOf="@+id/mine_menu_des_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mine_menu_tv" />
+
+    <View
+        android:id="@+id/mine_menu_divider_v"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e0e0e0"
+        app:layout_constraintBottom_toBottomOf="parent"></View>
+</android.support.constraint.ConstraintLayout>

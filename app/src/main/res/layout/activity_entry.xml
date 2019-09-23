@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_gray_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".models.discover.ApplyActivity">
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/entry_name"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                app:left_button_text="姓名"
+                app:left_button_text_color="#000000"
+                app:right_button_text="张三"
+                app:right_button_text_color="#FF9B9B9B"></com.ghs.ghshome.custom.MineEditCustomView>
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/entry_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                app:left_button_text="手机号"
+                app:left_button_text_color="#000000"
+                app:right_button_text="18810891140"
+                app:right_button_text_color="#FF9B9B9B"></com.ghs.ghshome.custom.MineEditCustomView>
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/entry_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_white_top_bottom_deeper_gray_shape_1px"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                app:left_button_text="活动联系人"
+                app:left_button_text_color="#000000"
+                app:right_button_text="李小双"
+                app:right_button_text_color="#FF9B9B9B"></com.ghs.ghshome.custom.MineEditCustomView>
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/entry_contacts_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                app:left_button_text="联系电话"
+                app:left_button_text_color="#000000"
+                app:right_button_text="17310809523"
+                app:right_button_text_color="#FF9B9B9B"></com.ghs.ghshome.custom.MineEditCustomView>
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/entry_site"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                app:left_button_text="活动地点"
+                app:left_button_text_color="#000000"
+                app:right_button_text="北京市万通中心3003"
+                app:right_button_text_color="#FF9B9B9B"></com.ghs.ghshome.custom.MineEditCustomView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/entry_leaveMessage_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="留言信息"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/entry_leaveMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="请输入.."
+                    android:inputType="textMultiLine"
+                    android:maxLength="300"
+                    android:maxLines="8"
+                    android:minHeight="120dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></RelativeLayout>
+
+    <TextView
+        android:id="@+id/entry_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bt_selecter_default_green"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="确定"
+        android:textColor="@color/app_white"
+        android:textSize="16dp" />
+
+</LinearLayout>

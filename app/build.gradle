@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        ghs_release {
+            keyAlias 'ghshome'
+            keyPassword 'Dexingjiu2018'
+            storeFile file('ghshome.keystore')
+            storePassword 'Dexingjiu2018'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ghs.ghshome"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 10
+        versionName "2.0.9"
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a", "x86", 'armeabi'
+        }
+        multiDexEnabled true
+
+
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/assets']
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.ghs_release
+        }
+        release {
+            signingConfig signingConfigs.ghs_release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    //渠道
+    productFlavors {
+//        huawei {}
+//        xiaomi {}
+        yingyongbao {}
+//        ali {}alicloud
+//        anzhi {}
+        //批量配置
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
+
+
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.google.android.gms:play-services-plus:16.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:design:28+'
+    //    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //图片压缩工具
+//    implementation 'top.zibin:Luban:1.1.8'
+    /*   okgo*/
+    api 'com.lzy.net:okgo:3.0.4'
+    implementation project(path: ':ManyBlue')
+    implementation 'org.xclcharts:lib:2.4'
+    /*hawk*/
+    implementation 'com.orhanobut:hawk:2.0.1'
+    //BARV
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //item滑动删除
+    implementation 'com.github.anzaizai:EasySwipeMenuLayout:1.1.4'
+    implementation 'com.android.support:cardview-v7:28+'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    // Glide图形转换工具
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    //datePicker
+    implementation 'com.contrarywind:Android-PickerView:4.1.5'
+    implementation 'org.jsoup:jsoup:1.9.2'
+    //OSS
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+
+    //友盟核心库
+    implementation 'com.umeng.sdk:common:latest.integration'
+    //友盟统计库
+    implementation 'com.umeng.sdk:analytics:latest.integration'
+    //图片缩放库
+    implementation 'com.bm.photoview:library:1.4.1'
+    //阿里推送
+    implementation 'com.aliyun.ams:alicloud-android-push:3.1.3'
+    implementation(name: 'alicloud-android-third-push-3.0.5', ext: 'aar')
+    //阿里热修复
+    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.2.8'
+    //沉浸式
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.2-beta01'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    //bugly 升级
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+//    implementation 'com.android.support:support-annotations:27+'
+    //动态权限申请
+    implementation 'com.zhy:mpermission-api:1.0.0'
+    //仿微信选择图片的库
+    implementation project(':PicSelecterLibrary')
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.0'
+    //banner轮播
+    implementation 'com.github.xiaohaibin:XBanner:1.6.7'
+    api project(':sdkDemo')
+    //superTextView
+    implementation 'com.github.lygttpod:SuperTextView:2.2.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.2'
+}

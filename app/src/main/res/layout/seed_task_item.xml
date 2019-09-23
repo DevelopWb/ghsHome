@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_marginLeft="15dp"
+    android:background="@drawable/bg_white_only_bottom_gray_shape_1px">
+
+    <ImageView
+        android:id="@+id/seed_task_item_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/seed_task_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="任务内容"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/seed_rule_tv"
+        app:layout_constraintLeft_toRightOf="@+id/seed_task_item_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/seed_task_progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/seed_task_name_tv"
+        app:layout_constraintLeft_toRightOf="@+id/seed_task_name_tv"
+        app:layout_constraintTop_toTopOf="@+id/seed_task_name_tv" />
+
+    <TextView
+        android:id="@+id/seed_rule_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="规则描述"
+        android:textColor="@color/unclick_gray_deep"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/seed_task_name_tv"
+        app:layout_constraintRight_toLeftOf="@+id/seed_task_commit_tv"
+        app:layout_constraintTop_toBottomOf="@+id/seed_task_name_tv" />
+
+    <TextView
+        android:id="@+id/seed_task_commit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="已完成"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

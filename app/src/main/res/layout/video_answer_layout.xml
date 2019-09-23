@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#27282D"
+    android:fitsSystemWindows="true"
+>
+
+    <LinearLayout
+        android:id="@+id/video_view_ll"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#27282D"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="38dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="16dp"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_view_ll">
+        <TextView
+            android:id="@+id/handUp_notice_tv"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:text="60秒后自动挂断,当前00:00"
+            android:textColor="#fff"
+
+            />
+        <TextView
+            android:id="@+id/video_sq"
+            android:padding="15dp"
+            android:layout_below="@+id/handUp_notice_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="访客向您申请开门申请"
+            android:textColor="#fff"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/video_opendao"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_below="@+id/video_sq"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/video_open_bg"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:paddingBottom="17dp">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@mipmap/video_open_lock" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/video_opendao"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:text="开门"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+
+        <include
+            android:id="@+id/video_handUp"
+            layout="@layout/handup_layout"
+            android:layout_width="65dp"
+            android:layout_height="96dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="65dp"
+            android:layout_marginBottom="30dp"></include>
+
+
+        <include
+            android:id="@+id/video_answer"
+            layout="@layout/answer_layout"
+            android:layout_width="65dp"
+            android:layout_height="96dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="30dp">
+
+        </include>
+
+
+        <include
+            android:id="@+id/video_handup2"
+            layout="@layout/handup_layout2"
+            android:layout_width="65dp"
+            android:layout_height="96dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"></include>
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_deeper_gray">
+
+    <TextView
+        android:id="@+id/taked_seed_amount_tv"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/seed_task_name_tv"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/seed_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/taked_seed_amount_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/taked_seed_amount_tv"
+        app:layout_constraintTop_toTopOf="@+id/taked_seed_amount_tv" />
+
+    <TextView
+        android:id="@+id/seed_task_name_tv"
+        android:layout_width="180dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text=""
+        android:textColor="@color/app_white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taked_seed_amount_tv"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>

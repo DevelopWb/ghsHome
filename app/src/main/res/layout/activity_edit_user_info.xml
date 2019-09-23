@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_gray_light"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/edit_user_head_pic_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="27dp"
+            android:paddingTop="15dp"
+            android:paddingRight="27dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:text="头像"
+                android:textAllCaps="false"
+                android:textColor="#FF9B9B9B"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/edit_head_iv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:src="@mipmap/default_user_head_icon" />
+
+            <TextView
+                android:id="@+id/edit_head_tv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:textColor="@color/app_white"
+                android:src="@mipmap/default_user_head_icon"
+                android:textSize="26dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="27dp"
+            android:background="#e0e0e0"></View>
+
+        <LinearLayout
+            android:id="@+id/edit_user_name_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/edit_user_name_mcv"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="25dp"
+                app:left_button_text="用户名"
+                app:left_button_text_color="#FF9B9B9B"
+                app:right_button_text="123133123123"
+                app:right_button_text_color="#000000"></com.ghs.ghshome.custom.MineEditCustomView>
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:src="@mipmap/arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="27dp"
+            android:background="#e0e0e0"></View>
+
+        <LinearLayout
+            android:id="@+id/edit_mobile_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/edit_mobile_mcv"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="25dp"
+                app:left_button_text="手机号"
+                app:left_button_text_color="#FF9B9B9B"
+                app:right_button_text="123133123123"
+                app:right_button_text_color="#000000"></com.ghs.ghshome.custom.MineEditCustomView>
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:src="@mipmap/arrow_right" />
+        </LinearLayout>
+
+
+        <com.ghs.ghshome.custom.MineEditCustomView
+            android:id="@+id/edit_weixin_name_mcv"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:visibility="gone"
+            app:left_button_text="微信号"
+            app:left_button_text_color="#FF9B9B9B"
+            app:right_button_text="未绑定"
+            app:right_button_text_color="#000000"></com.ghs.ghshome.custom.MineEditCustomView>
+
+
+    </LinearLayout>
+</LinearLayout>

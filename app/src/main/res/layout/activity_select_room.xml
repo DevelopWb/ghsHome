@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/select_room_drawerlayout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7F7F7"
+        android:orientation="vertical">
+
+        <com.ghs.ghshome.custom.CustomActionBar
+            android:id="@+id/custom_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            app:action_bar_background="@drawable/bg_gray_only_bottom_deeper_gray_shape_1px"
+            app:action_bar_left_image_src="@mipmap/back_icon"></com.ghs.ghshome.custom.CustomActionBar>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/cell_sl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/select_room_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/app_white"
+        android:minWidth="250dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cell_name_tv"
+            style="@style/ghshome_item_key"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="标题" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/room_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

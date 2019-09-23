@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="67dp"
+    android:background="@mipmap/app_pop_bg">
+
+    <TextView
+        android:id="@+id/get_seed_record_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取记录"
+        android:layout_marginTop="3dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/consume_seed_record_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/consume_seed_record_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用记录"
+        android:padding="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/get_seed_record_tv"
+        app:layout_constraintTop_toBottomOf="@+id/get_seed_record_tv" />
+</android.support.constraint.ConstraintLayout>

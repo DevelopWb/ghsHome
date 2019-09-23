@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    signingConfigs {
+        ghs_release {
+            keyAlias 'ghshome'
+            keyPassword 'Dexingjiu2018'
+            storeFile file('ghshome.keystore')
+            storePassword 'Dexingjiu2018'
+        }
+    }
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.ghs_release
+        }
+        release {
+            signingConfig signingConfigs.ghs_release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+}
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27+'
+    implementation 'com.android.support:recyclerview-v7:27+'
+    implementation 'com.google.android:flexbox:0.3.2'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    api files('libs/IMKFSDK-3.2.0.jar')
+}

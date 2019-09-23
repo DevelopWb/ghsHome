@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_gray_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/set_user_protocal_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/set_user_protocal_mcv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:left_button_text="用户协议"
+                app:left_button_text_color="#000000"></com.ghs.ghshome.custom.MineEditCustomView>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="25dp"
+                android:src="@mipmap/arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="25dp"
+            android:background="#e0e0e0"></View>
+
+        <com.ghs.ghshome.custom.MineEditCustomView
+            android:id="@+id/set_user_version_mcv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp"
+            app:left_button_text="版本号"
+            app:left_button_text_color="#000000"
+            app:right_button_text_color="#FF9B9B9B"></com.ghs.ghshome.custom.MineEditCustomView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="25dp"
+            android:background="#e0e0e0"></View>
+
+        <LinearLayout
+            android:id="@+id/set_user_clear_cache_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/set_user_clear_cache_mcv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                app:left_button_text="清理缓存"
+                app:left_button_text_color="#000000"
+                app:right_button_text="3.14M"
+                app:right_button_text_color="#FF9B9B9B"></com.ghs.ghshome.custom.MineEditCustomView>
+
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="25dp"
+                android:src="@mipmap/arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="25dp"
+            android:background="#e0e0e0"></View>
+
+        <LinearLayout
+            android:id="@+id/set_user_quite_app_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <com.ghs.ghshome.custom.MineEditCustomView
+                android:id="@+id/set_user_quite_app_mcv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                app:left_button_text="退出"
+                app:left_button_text_color="#000000"></com.ghs.ghshome.custom.MineEditCustomView>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="25dp"
+                android:src="@mipmap/arrow_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.ghs.ghshome.custom.CustomActionBar
+        android:id="@+id/custom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:action_bar_background="@drawable/bg_gray_only_bottom_deeper_gray_shape_1px"
+        app:action_bar_left_image_src="@mipmap/back_icon"
+        app:action_bar_title_text="房屋管理"></com.ghs.ghshome.custom.CustomActionBar>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/house_manager_sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/house_manager_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/add_house_tv"
+                style="@style/ghshome_bt"
+                android:text="添加新房屋" />
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

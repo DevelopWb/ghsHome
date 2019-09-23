@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_gray_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".models.propertyHall.complaint.ComplaintAndSuggestActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/layout_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"></include>
+
+
+        <EditText
+            android:id="@+id/mine_sugguest_content_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="请详细的描述问题，以便我们更好的处理"
+            android:inputType="textMultiLine"
+            android:maxLength="300"
+            android:maxLines="8"
+            android:minHeight="200dp"
+            android:padding="15dp"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/line_gray" />
+
+        <fragment
+            android:id="@+id/select_photos_fg"
+            android:name="com.ghs.ghshome.base.displayPhotos.SelectPhotosToUploadFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></fragment>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/car_info_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:id="@+id/fitment_start_time_ly"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="反馈类型"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/fitment_start_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="建议"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/fitment_start_time_image"
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_gravity="right|center"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/arrow_right" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/car_info_gray" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/entry_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bt_selecter_default_green"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="确定"
+        android:textColor="@color/app_white"
+        android:textSize="16dp" />
+</RelativeLayout>

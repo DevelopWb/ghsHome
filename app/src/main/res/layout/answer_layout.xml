@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65dp"
+    android:layout_height="96dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/video_gua"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/round_answer"
+        android:gravity="center">
+
+        <ImageView
+
+            android:layout_width="28dp"
+            android:layout_height="29dp"
+            android:src="@mipmap/video_open_call" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/video_gua"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:text="接听"
+        android:textColor="#fff"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

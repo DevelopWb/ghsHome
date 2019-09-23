@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/open_key_door"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/net_open_door_selector"
+        android:gravity="center">
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/netwok_item_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="@color/unclick_gray"
+        android:layout_height="wrap_content"
+        android:text="东大门"
+        />
+
+</LinearLayout>

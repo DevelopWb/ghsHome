@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65dp"
+    android:layout_height="96dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/video_gua"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/round"
+        android:gravity="center">
+
+        <ImageView
+
+            android:layout_width="36dp"
+            android:layout_height="18dp"
+            android:src="@mipmap/video_open_uncall" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/video_gua"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:text="挂断"
+        android:textColor="#fff"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

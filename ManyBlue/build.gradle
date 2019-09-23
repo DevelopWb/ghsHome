@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+group='com.github.pencilso'	// 指定group，com.github.<用户名>
+android {
+    signingConfigs {
+        ghs_release {
+            keyAlias 'ghshome'
+            keyPassword 'Dexingjiu2018'
+            storeFile file('ghshome.keystore')
+            storePassword 'Dexingjiu2018'
+        }
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.1.9"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.ghs_release
+        }
+        release {
+            signingConfig signingConfigs.ghs_release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'org.greenrobot:eventbus:3.1.1'
+    implementation  'junit:junit:4.12'
+    implementation 'com.android.support:support-compat:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28+'
+
+}

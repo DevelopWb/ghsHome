@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.ghs.ghshome.custom.CustomActionBar
+        android:id="@+id/custom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:action_bar_background="@drawable/bg_gray_only_bottom_deeper_gray_shape_1px"
+        app:action_bar_left_image_src="@mipmap/back_icon"
+        app:action_bar_title_text="认证提示"></com.ghs.ghshome.custom.CustomActionBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/check_notice_icon" />
+
+        <TextView
+            android:id="@+id/check_notice_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:id="@+id/check_notice_bt_tv"
+            style="@style/ghshome_bt"
+            android:text="联系物业"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="40dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
